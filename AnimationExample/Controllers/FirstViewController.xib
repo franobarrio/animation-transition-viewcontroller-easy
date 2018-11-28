@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="AnimationExample" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="xnQ-6H-XHY" id="uOx-PZ-1LO"/>
+                <outlet property="collectionView" destination="078-tK-pP3" id="DDf-Nl-zf5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="58C-ab-Nuy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view clipsSubviews="YES" tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnQ-6H-XHY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                    <color key="backgroundColor" red="0.46274509803921571" green="0.11764705882352941" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="078-tK-pP3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o0K-bu-vFl">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Wza-go-H2c"/>
+                        <outlet property="delegate" destination="-1" id="1lT-rp-FnI"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="078-tK-pP3" secondAttribute="trailing" id="CXo-2h-Ra2"/>
+                <constraint firstAttribute="bottom" secondItem="xnQ-6H-XHY" secondAttribute="bottom" id="D26-X5-9PX"/>
+                <constraint firstItem="078-tK-pP3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UNl-A2-6PK"/>
+                <constraint firstAttribute="trailing" secondItem="xnQ-6H-XHY" secondAttribute="trailing" id="YXd-XV-8wr"/>
+                <constraint firstItem="xnQ-6H-XHY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="adM-1v-s7v"/>
+                <constraint firstItem="xnQ-6H-XHY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hiL-50-D1v"/>
+                <constraint firstItem="078-tK-pP3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hmK-va-ave"/>
+                <constraint firstItem="078-tK-pP3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="jPf-Se-kDq"/>
+                <constraint firstItem="078-tK-pP3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="tVH-hI-OOW"/>
+                <constraint firstItem="078-tK-pP3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xKs-hT-nt3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.5" y="52"/>
+        </view>
+    </objects>
+</document>
