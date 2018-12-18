@@ -12,13 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-  //let transitionCoordinator = TransitionCoordinator()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         
-        let mainVC = FirstViewController()
+        let mainVC = MainViewController()
 
         let nav = UINavigationController(rootViewController: mainVC)
         nav.isNavigationBarHidden = true

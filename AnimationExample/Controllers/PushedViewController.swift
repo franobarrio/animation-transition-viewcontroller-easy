@@ -26,7 +26,7 @@
 import UIKit
 
 
-class SecondViewController: UIViewController {
+class PushedViewController: UIViewController {
     
     @IBOutlet weak var imageBottle: UIImageView!
     @IBOutlet weak var topBackground: UIView!
@@ -60,7 +60,7 @@ class SecondViewController: UIViewController {
 }
 
 // MARK: - Protocol for Transition
-extension SecondViewController : animTransitionable
+extension PushedViewController : animTransitionable
 {
     var cellImageView: UIImageView {
         return imageBottle

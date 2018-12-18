@@ -83,25 +83,19 @@ class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         
         let animator1 = {
-            UIViewPropertyAnimator(duration: 0.2, curve: .easeIn) {
-                cellBackground.layer.shadowOpacity = 0
-            }
-        }()
-        
-        let animator2 = {
             UIViewPropertyAnimator(duration: 0.4, dampingRatio: 1.3) {
                 cellBackground.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             }
         }()
         
-        let animator3 = {
+        let animator2 = {
             UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.9) {
                 cellBackground.layer.cornerRadius = 0
                 cellBackground.frame = frameAnim1
             }
         }()
         
-        let animator4 = {
+        let animator3 = {
             UIViewPropertyAnimator(duration: 0.2, dampingRatio: 1.4) {
                 cellBackground.frame = frameAnim2
                 imageViewSnapshot.frame = containerView.convert(toVC.cellImageView.frame, from: toVC.cellImageView.superview)
@@ -117,15 +111,8 @@ class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             animator3.startAnimation(afterDelay: 0.1)
         }
         
+        
         animator3.addCompletion {  _ in
-            animator4.startAnimation(afterDelay: 0.2)
-        }
-        
-        animator4.addCompletion {  _ in
-            animator4.startAnimation()
-        }
-        
-        animator4.addCompletion {  _ in            
             
             imageViewSnapshot.removeFromSuperview()
             cellBackground.removeFromSuperview()

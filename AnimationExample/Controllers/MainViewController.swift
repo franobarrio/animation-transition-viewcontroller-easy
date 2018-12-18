@@ -27,7 +27,7 @@
 import UIKit
 
 
-class FirstViewController: UIViewController,  UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+class MainViewController: UIViewController,  UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
 
     
     @IBOutlet var collectionView: UICollectionView!
@@ -52,13 +52,14 @@ class FirstViewController: UIViewController,  UINavigationControllerDelegate, UI
             "hexBackgroundColor": "d86940"
         ],
         [
-            "bottleName": "bottle3",
-            "hexBackgroundColor": "363538"
-        ],
-        [
             "bottleName": "bottle4",
             "hexBackgroundColor": "ebb700"
         ],
+        [
+            "bottleName": "bottle3",
+            "hexBackgroundColor": "363538"
+        ],
+
         [
             "bottleName": "bottle5",
             "hexBackgroundColor": "8e5700"
@@ -97,7 +98,7 @@ class FirstViewController: UIViewController,  UINavigationControllerDelegate, UI
             // Reference for the selected Cell
             self.selectedIndexPath = indexPath
             
-            let finalVC = SecondViewController()
+            let finalVC = PushedViewController()
             finalVC.selectedImage = dictionaryDataArray[indexPath.row]["bottleName"]!
             finalVC.topHexColor = dictionaryDataArray[indexPath.row]["hexBackgroundColor"]!
             
@@ -133,7 +134,7 @@ class FirstViewController: UIViewController,  UINavigationControllerDelegate, UI
 }
 
 // MARK: - DataSource
-extension FirstViewController: UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -150,7 +151,7 @@ extension FirstViewController: UICollectionViewDataSource {
 }
 
 // MARK: - Protocol for Transition
-extension FirstViewController : animTransitionable
+extension MainViewController : animTransitionable
 {
     var cellImageView: UIImageView {
         if let indexPath = selectedIndexPath {
