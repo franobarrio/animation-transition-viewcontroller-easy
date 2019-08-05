@@ -91,6 +91,7 @@ class MainViewController: UIViewController,  UINavigationControllerDelegate, UIC
         // Dispose of any resources that can be recreated.
     }
     
+    // collectionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if (collectionView.cellForItem(at: indexPath) as? CardCell) != nil {
@@ -112,8 +113,7 @@ class MainViewController: UIViewController,  UINavigationControllerDelegate, UIC
     
      func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        var visibleRect = CGRect()
-        
+        var visibleRect = CGRect()        
         visibleRect.origin = collectionView.contentOffset
         visibleRect.size = collectionView.bounds.size
         
@@ -132,54 +132,3 @@ class MainViewController: UIViewController,  UINavigationControllerDelegate, UIC
 
     
 }
-
-// MARK: - DataSource
-extension MainViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return dictionaryDataArray.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCellIdentifier", for: indexPath) as! CardCell        
-        cell.setupCell(imgViewName: dictionaryDataArray[indexPath.row]["bottleName"]!)
-        
-        return cell
-    }
-}
-
-// MARK: - Protocol for Transition
-extension MainViewController : animTransitionable
-{
-    var cellImageView: UIImageView {
-        if let indexPath = selectedIndexPath {
-            let cell = collectionView?.cellForItem(at: indexPath) as! CardCell
-            return cell.imageView
-        }
-        return UIImageView()
-    }
-    
-    var backgroundColor: UIView {
-        return backgroundView
-    }
-    
-    var cellBackground: UIView {
-        if let indexPath = selectedIndexPath {
-            let cell = collectionView?.cellForItem(at: indexPath) as! CardCell
-            return cell.cellBackground
-        }
-        return UIView()
-    }
-    
-    
-    
-   
-    
-}
-
-
-
-
-

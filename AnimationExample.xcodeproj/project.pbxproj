@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10ACF6C22F4DCD6001640A0 /* MainViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10ACF6B22F4DCD6001640A0 /* MainViewController+DataSource.swift */; };
+		A10ACF6E22F4DD01001640A0 /* MainViewController+ProtocolTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10ACF6D22F4DD01001640A0 /* MainViewController+ProtocolTransition.swift */; };
 		A14D61C1219C629000C6DA3E /* TransitionCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14D61C0219C629000C6DA3E /* TransitionCordinator.swift */; };
 		A19C21A021471E8600CDC6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C219F21471E8600CDC6ED /* AppDelegate.swift */; };
 		A19C21A721471E9100CDC6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A19C21A621471E9100CDC6ED /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10ACF6B22F4DCD6001640A0 /* MainViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DataSource.swift"; sourceTree = "<group>"; };
+		A10ACF6D22F4DD01001640A0 /* MainViewController+ProtocolTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ProtocolTransition.swift"; sourceTree = "<group>"; };
 		A14D61C0219C629000C6DA3E /* TransitionCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCordinator.swift; sourceTree = "<group>"; };
 		A14D61CA219C651400C6DA3E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A19C219C21471E8600CDC6ED /* AnimationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,8 @@
 			children = (
 				A19C21B321471FCB00CDC6ED /* CollectionViewLayout */,
 				A19C21B521471FCB00CDC6ED /* MainViewController.swift */,
+				A10ACF6B22F4DCD6001640A0 /* MainViewController+DataSource.swift */,
+				A10ACF6D22F4DD01001640A0 /* MainViewController+ProtocolTransition.swift */,
 				A19C21B121471FCB00CDC6ED /* MainViewController.xib */,
 				A19C21C121474D5800CDC6ED /* PushedViewController.swift */,
 				A19C21C221474D5800CDC6ED /* PushedViewController.xib */,
@@ -253,7 +259,9 @@
 				A19C21BB21471FCB00CDC6ED /* AnimationCollectionViewLayout.swift in Sources */,
 				A19C21C321474D5800CDC6ED /* PushedViewController.swift in Sources */,
 				A14D61C1219C629000C6DA3E /* TransitionCordinator.swift in Sources */,
+				A10ACF6E22F4DD01001640A0 /* MainViewController+ProtocolTransition.swift in Sources */,
 				A19C21C82149F14F00CDC6ED /* PushAnimator.swift in Sources */,
+				A10ACF6C22F4DCD6001640A0 /* MainViewController+DataSource.swift in Sources */,
 				A19C21A021471E8600CDC6ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
